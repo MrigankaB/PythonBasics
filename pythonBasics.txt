@@ -1,0 +1,422 @@
+Variable: A variable is a name given to any storage area or memory location in a program.
+          a and b are variables, and we can use a to access 34 and b to access 23.2. We can
+          also overwrite the values in a and b.
+
+
+
+Data Types in Python:
+
+Integers (<class 'int'>): Used to store integers
+Floating point numbers (<class 'float'>): Used to store decimal or floating-point numbers
+Strings (<class 'str'>): Used to store strings
+Booleans (<class 'bool'>): Used to store True/False type values
+None: None is literal to describe 'Nothing' in Python 
+
+
+
+Typecasting :
+
+Typecasting is the way to change one data type of any data or variable to another 
+datatype, i.e., it changes the data type of any variable to some other data type.
+
+
+
+*****************************************************************************
+
+
+String Slicing And Other Functions In Python:
+
+
+Primarily, you will find three types of strings in Python :
+Single Quote String – (‘Single Quote String’)
+Double Quote String – (“Double Quote String”)
+Triple Quote String – (‘’’ Triple Quote String ‘’’)
+
+
+string slicing s[n:m] for a string s is done as characters of s from n to m-1.
+E.g., abc="Demo" then abc[0:3] will give ‘Dem’ and will not give ‘Demo’ coz index
+number of ‘D’ is 0, ‘e’ is 1, ‘m’ is 2, and ‘o’ is 3. So it will give a range from 
+n to m-1, i.e., 0 to 3-1=2. That’s why we got the output ‘Dem’.
+
+In string slicing, we sometimes need to give a skip value i.e. string[n:m:skip_value]. 
+This simply takes every skip_valueth character. By default, the skip value is 1 but if 
+we want to choose alternate characters
+
+
+***
+
+#advanced slicing
+print(mystr[0:15:3]) #skips 1 letter
+
+print(mystr[::]) #it takes 0 by default
+
+print(mystr[::100])
+
+
+ 0    1   2   3   4   5   6   7   8   9
+ a    b   c   d   e   f   g   h   i   j
+-10  -9  -8  -7  -6  -5  -4  -3  -2  -1
+
+
+print(mystr[-4:-2:]    ( meaning print(mystr[6:8:] ) -----> output: "gh" )
+
+
+print(mystr[::-1]) #Reverse the string
+
+print(mystr[::-2])# Reverse the string and skips 1 character
+
+
+
+***
+
+
+Important string function:
+
+string.endswith(): This function allows the user to check whether a given string ends with 
+a passed argument or not. It returns True or False.
+
+string.count(): This function counts the total no. of occurrences of any character in the string. 
+It takes the character whose occurrence you want to find as an argument.
+
+string.capitalize(): This function capitalizes the first character of any string. It doesn’t take 
+any argument.
+
+string.upper(): It returns the copy of the string converted to the uppercase.
+
+string.lower(): It returns the copy of the string converted to lower case.
+
+string.find(): This function finds any given character or word in the entire string. It returns 
+the index of the first character from that word.
+
+string.replace(“old_word”, “new_word”): This function replaces the old word or character with a new 
+word or character from the entire string.
+
+len() Function
+
+
+
+**************************************************************************************
+
+
+
+List :
+
+Python lists are containers used to store a list of values of any data type. It is mutable.
+List is Surrounded by square bracket.
+
+list1 = ['harry', 'ram', 'Aakash', 'shyam', 5, 4.85]     #element from index 0 
+
+print(list1)
+
+list1.sort()
+print(l1)      #list1 after sorting
+list1.reverse()
+print(list1) #list1 after reversing all elements
+
+
+
+
+# List slicing and & important Methods :
+
+
+                      seq = list1[start_index : stop_index]
+
+
+numbers = [1, 22, 3, 14, 55, 6, 71, 8, 93]
+print(numbers)  # [1, 22, 3, 14, 55, 6, 71, 8, 93]
+print(numbers[5])  # 6
+
+numbers.sort()
+print(numbers) # [1, 3, 6, 8, 14, 22, 55, 71, 93]
+
+numbers.reverse()
+print(numbers)  # [93, 71, 55, 22, 14, 8, 6, 3, 1]
+
+print(numbers[0:3:2])  # includes every 2nd element or skips 1 element in between
+                       # [93, 55]
+                     
+numbers.append(5)  # adds a new number at the end
+print(numbers)     # [93, 71, 55, 22, 14, 8, 6, 3, 1, 5]
+
+numbers.insert(2,101) # [93, 71, 101, 55, 22, 14, 8, 6, 3, 1, 5]
+print(numbers)
+
+numbers.remove(93) # [71, 101, 55, 22, 14, 8, 6, 3, 1 , 5]
+print(numbers)
+
+numbers.pop()
+print(numbers) # [71, 101, 55, 22, 14, 8, 6, 3, 1, ]
+
+***************************************************************************************
+
+
+Tuple: 
+
+A tuple is an immutable data type in Python. A tuple in python is a collection of 
+elements enclosed in () (parentheses). Tuple, once defined, can’t be changed.
+
+a=() # It's an example of empty tuple   
+x=(1,)  # Tuple with single value i.e. 1;  it is necessary to put a comma  ‘,’ after one element
+
+tup1 = (1, 2, 3, 4, 5)
+
+tup1 = ('harry', 5, 'Raj', 2.8, 91, 22)
+
+***************************************************************************************
+
+
+Dictionary:
+
+“Python dictionary is an unordered collection of items. Each item of the dictionary has a key and 
+value pair/ key-value pair
+
+Features-
+*It is unordered
+*It is mutable 
+*It is indexed 
+*No duplication of data (each key is unique; no two keys can have the same name, so there is no chance 
+                         for a data being overridden)
+
+
+****************************************************************************************
+
+
+Sets:
+
+“A set is a data structure, having unordered, unique, and unindexed elements.”
+
+* Sets are iterable(iterations can be performed using loops)
+* They are mutable (can be updated by adding or removing entries)
+* There is no duplication (two same entries do not occur)
+
+
+Once a set is created, you can not change any of its items. Although you can add new items or remove 
+previous but updating an already existing item is not possible.
+There is no indexing in sets, so accessing an item in order or through a key is not possible. 
+
+
+Some of the methods you can use with sets include union(), discard(), add(), isdisjoint(), etc., and their
+functionality is the same as in the sets in mathematics.
+
+
+
+
+******************************************************************************************
+
+
+If Else & Elif Conditionals
+
+
+“If, else and elif statement can be defined as a multiway decision taken by our program due to the certain 
+conditions in our code.”
+
+
+Tips: 
+
+As we know that an “if” statement is necessary, and you can’t have an “else” or “else-if” without it, but 
+let’s suppose you have a large amount of code and for some reason, you have to remove the “if” part of the 
+code (because maybe your code is better without it) but you do not want to do lots of coding again. Then the 
+solution is just to write ***pass*** instead of the code, and this will help your code run without any error without 
+executing the if part.
+
+
+
+*********************************************************************************************
+
+For Loop
+
+#Prime Number
+
+if num > 1:
+    for i in range(2, int(num/2)+1):  
+        # If num is divisible by any number between 2 and n / 2, it is not prime        
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            break
+
+    	else:
+        print(num, "is a prime number")
+  
+else:
+    print(num, "is not a prime number")
+
+
+
+
+***************************************************************************************
+
+While Loop:
+
+A while loop in python runs a bunch of code or statements again and again until the given condition 
+is true when the condition becomes false, the loop terminates its repetition.
+
+
+For vs. While:
+
+A “for” statement loop runs until the iteration through, set, lists, tuple, etc., or a generator function is completed. 
+In the case of a while loop, the statement simply loops until the condition we have provided becomes false. We generally 
+use for loops for areas where we are already familiar with the number of iterations and use while loop where the number 
+of iterations are unknown. Because while the loop is solely based on the state of its condition.
+
+
+***************************************************************************************
+
+Break & Continue Statements:
+
+“Break and continue statements are used to alter the flow or normal working of a loop, that could be either a “for loop” 
+or “while loop”.
+
+
+	Break statement alters the normal functionality of the loops by terminating or exiting the loop containing it. 
+	The compiler then moves on to the code that is placed after the body of the loop. 
+
+	Continue statement also alters the flow of a normal working loop, but unlike the break statement, it takes the 
+	compiler to the start of the code that has already been executed before the statement but is inside the loop boundary. 
+	All the code written after the continue statement is skipped, but it is worth noting that the continue statement works 
+	only for a single iteration. 
+
+i=0;
+while(True):
+    i=i+1
+    if(i==3):
+        continue
+    if(i>6):
+        break
+    print(f"The value of i is : {i}")
+
+Output:
+The value of i is : 1
+The value of i is : 2
+The value of i is : 4
+The value of i is : 5
+The value of i is : 6
+
+When you are working with a big project, there might occur a situation where you only need to use the loop partially without 
+adding new or removing already existing lines of code. You can easily apply the break statement in your code so that you can 
+partially run it without any sort of error.
+
+Or in another situation, let's suppose you are working with while loop printing some lines on the screen and you want to skip 
+an iteration in between others, then you can write the continue statement 
+
+
+*********************************************************************************************
+
+Operators that Python Language supports are:
+
+* Arithmetic Operators
+* Assignment Operators
+* Comparison Operators
+* Logical Operators
+* Identity Operators
+* Membership Operators
+* Bitwise Operators
+
+
+Arithmetic Operators:
+
+Basic mathematical operations such as addition, multiplication, subtraction, division, etc. are performed with the help of 
+arithmetic Operations. It contains nearly all operations that we can perform with the help of a calculator. Symbols for such 
+operators include *, /, %, -, //, etc.    
+
+
+Assignment Operators:
+
+The assignment operator is used to assign values to a variable. In some cases, we have to assign a variable’s value to another 
+variable, in such cases the value of the right operand is assigned to the left operand. One of the basic signs from which we can 
+recognize an assignment operator is that it must have an equal-to(=) sign. Some commonly used assignment operators include +=, -=, /=, etc.
+
+
+Comparison Operators:
+
+They are also known as relational operators. They compare the values on either side of the operator and decide the relation among them. 
+Commonly used comparison operators include ==, >, < , >=,etc.
+
+
+Logical Operators:
+
+Logical operators perform logical AND, OR and NOT, operations. They are usually used in conditional statements to join multiple conditions. 
+AND, OR and NOT keywords are used to perform logical operations.
+
+
+Identity Operations:
+
+Identity operator checks if two operands share the same identity or not, which means that they share the same location in memory or different. 
+“is” and “is not” are the keywords used for identity operands.
+
+
+Membership Operands:
+
+Membership operand checks if the value or variable is a part of a sequence or not. The sequence could be string, list, tuple, etc. “in” and 
+“not in” are keywords used for membership operands.
+
+
+Bitwise Operand:
+
+Bitwise operands are used to perform bit by bit operation on binary numbers. First, we have to change the format of the number from decimal to 
+binary and then compare them using AND, OR, XOR, NOT, etc.
+
+
+*********************************************************************************************
+
+Functions:
+
+
+“Functions in Python can be defined as lines of codes that are built to create a specific task and can be used again and again in a program when called.”
+
+
+There are two types of functions in the Python language:
+
+	* Built-in functions
+	* User-defined functions
+
+
+Advantages of using a function:
+
+	* If we are working on a big project then we will prefer to make as many functions as possible, so every other member of our team could use that.
+
+	* By using functions, we can avoid the repetition of code to an extent. As we have discussed in the previous tutorial i.e. Tutorial #22, more lines 
+	  of code mean less efficiency. Also repeating the same code at different places will just make the code more crowded than required.
+
+	* The reusability of code is ensured by using functions. We can even use a function inside another function or in any part of our code.
+
+	* By making a function of code that we are going to use again and again, we can save a lot of time.
+
+
+Docstrings:
+
+Docstring is a short form of documentation string. Its purpose is to give the programmer a brief knowledge about the functionality of the function. It must be 
+the first string in a function, and it is also an optional string but always good to have it while working on programs having multiple functions. The syntax for 
+writing a docstring is very simple as it is just a string written in between three double quotes placed three times (""" """) on either side of the string. But it 
+has to be the first line of code in the function’s body. To call a docstring we write the name of the function followed by ._doc_.
+
+
+*********************************************************************************************
+
+Try and Catch:
+
+Works as a exception handler. This code will save the state of the program up to the point where the exception occurred and will continue the normal flow from the code 
+written outside the area of occurrence of an exception. We can also print the exception by converting it into a string. This way program does not terminate but executes 
+completely except for the area where the exception occurred.
+
+There are also many sorts of predefines exceptions that we could find in Python such as EOF or End of File Error (occurs when the end of a file is reached but the 
+operation is not completed) or ZeroDivisionError (occurs when the number is divided by zero).
+
+
+Advantages of using try and catch:
+
+* Without a try block if an exception occurs the program will surely crash.
+
+* If we have some part of code that is not much important but can cause an exception, then we must write it down in the try block so it does not cause the whole 
+program to crash.
+
+
+
+*********************************************************************************************
+
+
+
+
+
+
+
+
